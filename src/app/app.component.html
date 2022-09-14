@@ -1,0 +1,22 @@
+<div class="container-fluid h-50">
+  <div class="row justify-content-center vh-100">
+    <div class="col-md-9 col-xl-9 chat">
+      <div class="card">
+        <div class="card-body msg_card_body">
+          <ng-container *ngFor="let message of messages">
+            <div class="d-flex mb-4 justify-content-start">
+              <div class="msg_cotainer_send">
+                {{ message }}
+              </div>
+            </div>
+          </ng-container>
+        </div>
+        <div class="card-footer">
+          <div class="input-group">
+            <textarea name="" class="form-control type_msg" placeholder="Type your message..." (keypress)="userEntry($event)"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
